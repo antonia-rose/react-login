@@ -8,10 +8,12 @@ export const LoginContainer = () => {
             <h1>Login</h1>
             <InputContainer
                 title="E-Mail"
-                type="text" />
+                type="email"
+                required="required" />
             <InputContainer
                 title="Password"
-                type="password" />
+                type="password"
+                required="required" />
         </section>
     );
 };
