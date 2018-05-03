@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 
 import {InputContainer} from "../InputContainer";
@@ -9,11 +10,11 @@ export const LoginContainer = () => {
             <InputContainer
                 title="E-Mail"
                 type="email"
-                required="required" />
+                required={true} />
             <InputContainer
                 title="Password"
                 type="password"
-                required="required" />
+                required={true} />
         </section>
     );
 };

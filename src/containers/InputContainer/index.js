@@ -1,12 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+
+import * as React from 'react';
 
 // TODOs:
 /// Eingabe Email prüft bei jedem Zeichen, ob ein @ und ein . vorhanden sind
 /// Eingabe Passwort prüft Komplexität und baut ein Haus vom Nikolaus?
 /// erst wenn beide felder validieren wird ein button angezeigt
 
-export class InputContainer extends React.Component {
+type Props = {
+    title: string,
+    type: string,
+    required?: boolean
+}
+export class InputContainer extends React.Component<Props> {
+    static defaultProps = {
+        type: 'text'
+    };
+
     render() {
         return (
             <div>
@@ -18,13 +28,4 @@ export class InputContainer extends React.Component {
             </div>
         );
     }
-};
-
-InputContainer.defaultProps = {
-    type: 'text'
-};
-
-InputContainer.propTypes = {
-    type: PropTypes.string.isRequired,
-    title: PropTypes.string
-};
+}
